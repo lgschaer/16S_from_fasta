@@ -3,7 +3,7 @@ Process 16S data from a fasta file.
 
 
 ### trying this https://docs.qiime2.org/2023.2/tutorials/otu-clustering/
-### made new fasta in R with same formatting as example in above link 
+### made new fasta in R with same formatting as example in above link from original fasta and barcode key
 
 (activate qiime)
 
