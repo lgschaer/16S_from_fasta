@@ -53,3 +53,16 @@ qiime feature-classifier classify-sklearn \
 qiime metadata tabulate \
 --m-input-file taxonomy_gtdb_214.qza \
 --o-visualization taxonomy_gtdb_214.qzv
+
+### rarefy
+
+qiime feature-table rarefy --i-table table-dn-99.qza --p-sampling-depth 11675 --o-rarefied-table table-dn-99-rarefied-11k.qza
+
+### export tables
+
+unzip table-dn-99-rarefied-11k.qza
+mv aec4213c-7883-4f1a-bbf3-e9265eaa8c41 sequence_table
+biom convert -i sequence_table/data/feature-table.biom -o feature-table.txt --to-tsv
+
+unzip taxonomy_gtdb_214.qza
+mv c48aa352-8dbd-4cbe-a2b9-cb2ce108b2a1 taxa_table
